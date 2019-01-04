@@ -15,7 +15,7 @@ encoder.fit(input_labels)
 test_labels = ['green', 'red', 'black']
 encoded_values = encoder.transform(test_labels)
 print("\nLabels =", test_labels)
-print("Encoded values =", list(encoded_values))
+print("\nEncoded values =", list(encoded_values))
 
 # 通过解码一组随机数来检查性能 -
 
@@ -23,3 +23,14 @@ encoded_values = [3, 0, 4, 1]
 decoded_list = encoder.inverse_transform(encoded_values)
 print("\nEncoded values =", encoded_values)
 print("\nDecoded labels =", list(decoded_list))
+
+'''
+Labels = ['green', 'red', 'black']
+
+Encoded values = [1, 2, 0]
+
+Encoded values = [3, 0, 4, 1]
+
+Decoded labels = ['white', 'black', 'yellow', 'green']
+
+'''
